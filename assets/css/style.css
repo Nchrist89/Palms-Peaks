@@ -1,0 +1,7 @@
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Klee+One&family=Shojumaru&display=swap');
+
+/* main header */
+#navbar li {
+    list-style-type: none;
+}
