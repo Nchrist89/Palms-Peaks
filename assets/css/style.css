@@ -1,16 +1,116 @@
-/* Google font import */
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Klee+One&family=Shojumaru&display=swap');
 
-/* main header */
-#menu {
-    list-style-type: none;
-    line-height: 2rem;
-    font-size: 21px;
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    min-height: 100vh;
     display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    background-color: sandybrown;
-    
+    flex-direction: column;
+    /* Generic project styles */
+    color: sandybrown;
+    font-family: "Happy Monkey", sans-serif;
+}
+
+#logo {
+    font-family: "Shojumaru", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: sandybrown;
 }
 
 
+/* Header */
+header {
+    background-color: darkgreen;
+    padding: 1rem 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid sandybrown;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+#menu>li {
+    margin: 0.5rem;
+}
+
+.active {
+    border-bottom: 1px solid sandybrown
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: darkgreen;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/* Main content */
+main {
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+}
