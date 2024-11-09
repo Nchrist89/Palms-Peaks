@@ -1,6 +1,15 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Klee+One&family=Shojumaru&display=swap');
 
+/* Global Styles */
+
+:root {
+    --primary-font: "Happy Monkey", sans-serif;
+    --secondary-font: "Shojumaru", sans-serif;
+    --primary-color: sandybrown;
+    --secondary-color: #186600;
+}
+
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
@@ -14,56 +23,63 @@ body {
     display: flex;
     flex-direction: column;
     /* Generic project styles */
-    color: sandybrown;
-    font-family: "Happy Monkey", sans-serif;
+    color: var(--primary-color);
+    font: var(--primary-font);
 }
 
 #logo {
-    font-family: "Shojumaru", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: sandybrown;
+    width: 55px;
+    height: 55px;
+    margin-left: 8px;
+    padding: 5px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    background-color: var(--secondary-color)
 }
 
 
 /* Header */
 header {
-    background-color: darkgreen;
-    padding: 1rem 1rem;
+    background-color: var(--secondary-color)
+    padding: 0.5rem 0.5rem;
     position: fixed;
     z-index: 99;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid sandybrown;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 header a {
     text-decoration: none;
-    color: inherit;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
 }
 
 #menu {
     list-style-type: none;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 #menu>li {
-    margin: 0.5rem;
+    margin: 1rem;
+    display: block;
+    text-align: center;
 }
 
 .active {
-    border-bottom: 1px solid sandybrown
+    border-bottom: 2px solid var(--primary-color)
 }
 
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    background-color: darkgreen;
+    background-color: var(--secondary-color);
     width: 100%;
     left: 0;
-    padding: 0 1rem;
+    padding: 5px;
     display: none;
     top: 100%;
 }
@@ -89,28 +105,50 @@ main {
 }
 
 
-/* Media query: tablets and larger (768px and up) */
-@media screen and (min-width: 768px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
 
     /* Header */
     nav {
         display: block;
         position: relative;
-        box-shadow: none;
         width: fit-content;
+        letter-spacing: 2px;
         padding-right: 1rem;
+        color: var(--primary-color);
+        font-size: 1.5rem;
     }
 
     #menu {
         display: flex;
     }
 
-    #menu>li {
-        padding-left: 1rem;
-    }
-
     .nav-toggle-label {
         display: none;
     }
 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        width: fit-content;
+        letter-spacing: 2px;
+        padding-right: 2rem;
+        color: var(--primary-color);
+        font-size: 2rem;
+    }
+
+    #logo {
+        width: 75px;
+        height: 75px;
+        margin-left: 15px;
+        padding: 5px;
+        border: 3px solid var(--primary-color);
+        border-radius: 50%;
+    }
 }
