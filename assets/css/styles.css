@@ -15,11 +15,6 @@
     --accent-color: #006aff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html {
     font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,7 +22,8 @@ html {
 
 nav {
     height: 60px;
-    background-color: var(--color-1);
+    width: 100%;
+    background-color: black;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -47,10 +43,71 @@ nav a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
 }
 
 nav a:hover {
-    background-color: lightblue;
+    background-color: blue;
 
+}
+
+nav .home-link {
+    margin-right: auto;
+}
+
+.fa-solid {
+    color: white;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: black;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    .open-sidebar-button,
+    .close-sidebar-button {
+        padding: 20px;
+        display: block;
+
+    }
+
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
 }
