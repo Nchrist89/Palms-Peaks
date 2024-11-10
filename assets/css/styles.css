@@ -1,0 +1,50 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Klee+One&family=Shojumaru&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Global Styles */
+
+:root {
+    --primary-font: "Happy Monkey", sans-serif;
+    --secondary-font: "Shojumaru", sans-serif;
+    --primary-color: sandybrown;
+    --secondary-color: #186600;
+}
+
+html {
+    font-size: 12pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: blue;
+}
