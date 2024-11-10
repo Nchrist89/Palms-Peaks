@@ -10,24 +10,29 @@
 /* Global Styles */
 
 :root {
-    --primary-font: "Happy Monkey", sans-serif;
-    --secondary-font: "Shojumaru", sans-serif;
-    --primary-color: sandybrown;
-    --secondary-color: #186600;
+    --color-1: #0f1016;
+    --text-color: #f0f0f0;
+    --accent-color: #006aff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 12pt;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav {
     height: 60px;
-    background-color: black;
+    background-color: var(--color-1);
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+
 .links-container {
     height: 100%;
     width: 100%;
@@ -42,9 +47,10 @@ nav a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 nav a:hover {
-    background-color: blue;
+    background-color: lightblue;
+
 }
