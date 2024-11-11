@@ -69,14 +69,12 @@ nav .home-link {
     display: none;
 }
 
-#hero {
+.container {
     display: flex;
-    justify-content: stretch;
-    height: 100%;
+}
+
+#hero img {
     width: 100%;
-    background: url("/assets/images/Palms\ and\ peaks\ entrance9.png");
-    background-repeat: no-repeat;
-    
 }
 
 /* Extra small devices (phones, 600px and down) */
