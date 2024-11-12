@@ -1,0 +1,23 @@
+.container {  
+    display: flex;             /* Enables flexbox layout */  
+    flex-direction: row;      /* Sets direction of the flex items */  
+    justify-content: space-between; /* Distributes space between items */  
+    height: 100vh;           /* Optional: Set height for demo */  
+}  
+
+.sidebar {  
+    flex: 0 0 auto;          /* Prevents the sidebar from growing or shrinking */  
+    /* Add additional styles for your sidebar */  
+    background-color: #f0f0f0;   
+    padding: 20px;   
+}  
+
+.navbar {  
+    display: flex;            /* Enables flex on navbar for aligning inside it */  
+    justify-content: flex-end; /* Aligns items inside navbar to the end */  
+    flex: 1;                  /* Allows the navbar to take remaining space */  
+    /* Add additional styles for your navbar */  
+    background-color: #007bff;   
+    padding: 20px;  
+    color: white;  
+}  
