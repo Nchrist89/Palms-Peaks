@@ -31,9 +31,9 @@ html {
 /* Navigation bar */
 
 #logo {
-    height: 50px;
-    width: 50px;
-    border: 2px solid #FF5F1F;
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--jaffa);
     background-position: center;
     border-radius: 50%;
     background-color: whitesmoke;
@@ -44,11 +44,13 @@ html {
 nav {
     height: 65px;
     width: 100%;
-    background-color: #eabe75;
+    background-color: #643C20;
+    background-image: url("/assets/images/navbar1.png");
+    background-size: 200px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border-bottom: 3px solid #FF5F1F;
+    border-bottom: 2px solid #FF5C00;
 }
 
 .links-container {
@@ -67,9 +69,9 @@ nav a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #FF5F1F;
+    color: #FF5C00;
     font-family: "Shojumaru";
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 1px;
 }
 
@@ -78,7 +80,7 @@ nav a:hover {
 }
 
 .fa-solid {
-    color: #FF5F1F;
+    color: #FF5C00;
 }
 
 #sidebar-active {
@@ -91,18 +93,18 @@ nav a:hover {
 }
 
 .container {
-    width: 100%;
-    margin: auto;
+    width: 100;
+
 }
 
 .container img {
     width: 100%;
     height: fit-content;
-    object-fit: cover;
+    max-height: 450px;
 }
 
-/* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 500px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
 
     /* Sidebar Navigation bar styles*/
     .links-container {
@@ -116,6 +118,15 @@ nav a:hover {
         background-color: black;
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.75s ease-out;
+    }
+
+    nav {
+        height: 50px;
+    }
+
+    #logo {
+        width: 30px;
+        height: 30px;
     }
 
     nav a {
@@ -151,8 +162,7 @@ nav a:hover {
     }
 
     .container img {
-        position: relative;
-        height: 150px;
+        max-height: 200px;
     }
 
     #home-icon {
